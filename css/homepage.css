@@ -1,0 +1,127 @@
+ .align h1{
+text-align:center;
+font-family: 'Times New Roman', Times, serif;
+}
+.abt p
+{
+    text-align:justify;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+}
+.Mar marquee
+{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size:large;
+
+}
+
+
+body{
+    color : white;
+    background: url(../images/bg.jpg);
+}
+
+.contactus h1{
+    background-color: #143d59;
+    text-align: left;
+}
+
+.abt span{
+    background-color:yellow;
+    font-size: larger;
+    color: maroon;
+    font-size: x-large;
+}
+
+.navbar a.navicons:hover {
+    background-color: #000;
+  }
+
+  .navbar
+{
+    background-color: #143d59;
+    text-align: center;
+    color: black;
+    font-family: 'Roboto', sans-serif;
+    font-size: larger;
+    font-weight: bold;
+    padding: 0.3cm;
+    width: 100%;
+    background-color: #143d59;
+    overflow: auto;
+
+}
+
+
+
+   .navbar a.navicons {
+    float: right;
+    text-align: center;
+    padding: 12px;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .heading h1{
+    font-size: 45px;
+    text-align: center;
+  }
+
+  .heading h2{
+    font-size: 40px;
+    text-align: center;
+  }
+
+
+  .navlogo
+  {
+      float: left;
+  }
+
+  .square img {
+    float: left;
+    margin: 5px;
+    width: 700px;
+    height: 230px;
+}
+.square p {
+    text-align: justify;
+    font-size: 25px;
+    color: #ffffff;
+}
+.square p span{
+    color:  #ffffff;
+    font-weight: 90px;
+    font-size: 45px;
+    font-family: 'Montserrat', sans-serif;
+}
+* {
+box-sizing: border-box;
+}
+
+table {
+    border-collapse: separate;
+    border-spacing: 25px;
+    width: 100%;
+
+  }
+
+  th {
+   
+    color: white;
+
+  }
+  th,
+  td {
+    width: 150px;
+    text-align: center;
+    padding: 5px;
+    color: white;
+   
+  }
+
+  .table
+  {
+      font-size: large;
+  }
