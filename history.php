@@ -58,7 +58,7 @@
 </div>
 </div>
 <div class="heading">
-<h1 >WELCOME TO CUSTOMER DETAILS PAGE</h1>
+<h1 >WELCOME TO TRANSACTION HISTORY</h1>
 </div>
 <div class="Mar">
  <marquee direction="right" >Customer Privacy Is Our Main Aim!!!</marquee>
@@ -74,7 +74,7 @@ if($con==false)
 	{
 		die("ERROR:Could not Connect.".mysqli_connect_error());
 	}
-	$sql="select * from cust_det";
+	$sql="select * from trans_his";
 	$query=mysqli_query($con,$sql);
 	if(!$query)
 	{
@@ -83,20 +83,18 @@ if($con==false)
     echo  " <br> 
     <table>
 	<tr>
-	<th>S.No</th>
-<th>Name-id</th>
-<th>Email</th>
-<th>Phone No</th>
-<th>Balance</th>
+<th>Sender</th>
+<th>Receiver</th>
+<th>Amount</th>
+<th>Date</th>
 </tr>";
 while ($row=mysqli_fetch_array($query)) {
 	
 	echo "<tr>
-	<td>".$row['S.No']."</td>
-	<td>".$row['Name']."</td>
-	<td>".$row['Email']."</td>
-	<td>".$row['Phone No']."</td>
-	<td>".$row['Balance']."</td>
+	<td>".$row['from_user']."</td>
+	<td>".$row['to_user']."</td>
+	<td>".$row['amount']."</td>
+	<td>".$row['date']."</td>
     </td>
 	</tr>";
 }
