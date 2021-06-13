@@ -34,74 +34,82 @@
 
 		}
 		td:hover{
-			background-color:#F08080;
+			background-color: #F08080;
 		}
         </style>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 	<link rel="stylesheet" href="css/homepage.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital@1&display=swap" rel="stylesheet">
     <title>Customer Details</title>
 </head>
 <body>
-<div class="header">
+<div class="headd">
 
 <div class="navbar">
     <a class="navlogo" href="index.html" style="padding:0px; " target="_self">
         <img src="images/logo.svg" alt="logo" width="100" height="50">
       </a>
+      <a class = "navicons" href="index.html">Home</a>
+      <a class = "navicons" href="customerdetails.php">Customer Details</a>
+      <a class = "navicons" href="customerdetails.php">Transfer Money</a>
+    <a class = "navicons" href="transactionhistory.php">Transaction History</a>
     <a class = "navicons" href="#contact">Contact</a>
-    <a class = "navicons" href="#transac">Transaction History</a>
-    <a class = "navicons" href="trans.php">Transfer Money</a>
-    <a class = "navicons" href="customerdetails.php">Customer Details</a>
-    <a class = "navicons" href="index.html">Home</a>
     
 </div>
 </div>
-<div class="heading">
+<div class="headd">
 <h1 >WELCOME TO CUSTOMER DETAILS PAGE</h1>
 </div>
 <div class="Mar">
  <marquee direction="right" >Customer Privacy Is Our Main Aim!!!</marquee>
  </div>
 
-<?php
-$host="localhost";
-$user="root";
-$password="";
-$dbname="customer detail";
-$con=mysqli_connect($host,$user,$password,$dbname);
-if($con==false)
-	{
-		die("ERROR:Could not Connect.".mysqli_connect_error());
-	}
-	$sql="select * from cust_det";
-	$query=mysqli_query($con,$sql);
-	if(!$query)
-	{
-		die("ERROR:Could not Connect.".mysqli_connect_error());
-	}
-    echo  " <br> 
-    <table>
-	<tr>
-	<th>S.No</th>
-<th>Name-id</th>
-<th>Email</th>
-<th>Phone No</th>
-<th>Balance</th>
-</tr>";
-while ($row=mysqli_fetch_array($query)) {
-	
-	echo "<tr>
-	<td>".$row['S.No']."</td>
-	<td>".$row['Name']."</td>
-	<td>".$row['Email']."</td>
-	<td>".$row['Phone No']."</td>
-	<td>".$row['Balance']."</td>
-    </td>
-	</tr>";
-}
-mysqli_close($con);
+ <?php
+    include 'config.php';
+    $sql = "SELECT * FROM cust_det";
+    $result = mysqli_query($conn,$sql);
 ?>
+
+<div class="container">
+        <h2 style="text-align: center;">Transfer Money</h2>
+        <br>
+            <div class="row">
+                <div class="col">
+                    <div class="table-responsive-sm">
+                    <table>
+                       
+                            <tr>
+                            <th scope="col" class="text-center py-2">Id</th>
+                            <th scope="col" class="text-center py-2">name</th>
+                            <th scope="col" class="text-center py-2">E-Mail</th>
+                            <th scope="col" class="text-center py-2">Phone NO</th>
+                            <th scope="col" class="text-center py-2">Balance</th>
+                            <th scope="col" class="text-center py-2">Operation</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                <?php 
+                    while($rows=mysqli_fetch_assoc($result)){
+                ?>
+                    <tr style="color : black;">
+                        <td class="py-2"><?php echo $rows['sno'] ?></td>
+                        <td class="py-2"><?php echo $rows['name']?></td>
+                        <td class="py-2"><?php echo $rows['Email']?></td>
+                        <td class="py-2"><?php echo $rows['Phone No']?></td>
+                        <td class="py-2"><?php echo $rows['Balance']?></td>
+                        <td><a href="userdetails.php?id= <?php echo $rows['sno'] ;?>"> <button >View and Transact</button></a></td> 
+                    </tr>
+                <?php
+                    }
+                ?>
+
+                        </tbody>
+                    </table>
+                    </div>
+                </div>
+            </div> 
+         </div>
 
 
 </body>
