@@ -25,22 +25,27 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="headd">
-
-<div class="navbar">
-    <a class="navlogo" href="index.html" style="padding:0px; " target="_self">
-        <img src="images/logo.svg" alt="logo" width="100" height="50">
-      </a>
-      <a class = "navicons" href="index.html">Home</a>
-      <a class = "navicons" href="customerdetails.php">Customer Details</a>
-      <a class = "navicons" href="customerdetails.php">Transfer Money</a>
-    <a class = "navicons" href="transactionhistory.php">Transaction History</a>
-    <a class = "navicons" href="#contact">Contact</a>
-    
-    
-    
-</div>
-</div>
+    <header class="p-3 bg-dark text-white">
+		<div class="container">
+		  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+				<img src="images/logo.png" alt="logo" width="200" height="50">
+			</a>
+	
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+			  <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+			  <li><a href="customerdetails.php" class="nav-link px-2 text-white">Customer Details</a></li>
+			  <li><a href="customerdetails.php" class="nav-link px-2 text-white">Transfer Money</a></li>
+			  <li><a href="transactionhistory.php" class="nav-link px-2 text-secondary">Transaction History</a></li>
+			  <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
+			</ul>
+	
+			<a href="customerdetails.php"><button type="button" class="btn btn-outline-light">Transfer Money</button></a>
+	
+		
+		  </div>
+		</div>
+	  </header>
   <!-- End Navbar -->
 
      <!-- Table -->
@@ -90,28 +95,33 @@ while($rows = mysqli_fetch_assoc($query))
 <!-- End Table -->
 
 <!-- Footer -->
-<footer style="margin-top:200px;">
-    <div class="follow">
-      <h3 style="color: black; font-family: 'Baloo Bhai 2', cursive; font-size: 25px;">Follow Us</h3>
-      <div class="social">
-        <a href="#facebook" class="facebook">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#twitter" class="twitter">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#linkedin" class="linkedin">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="#instagram" class="instagram">
-          <i class="fa fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <p class="text-copy">
-      Copyright &copy; 2021 All rights reserved
-    </p>
-  </footer>
+<footer>
+		<div id="contact">
+		<div class="follow">
+		  <h3 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 25px;">Follow Us</h3>
+		  <div class="social">
+			<a href="https://www.facebook.com/manoj.adhithya.16/" class="facebook">
+			  <i class="fa fa-facebook"></i>
+			</a>
+			<a href="#twitter" class="twitter">
+			  <i class="fa fa-twitter"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/manoj-adhithya-001330213/" class="linkedin">
+			  <i class="fa fa-linkedin"></i>
+			</a>
+			<a href="https://www.instagram.com/be.like.adhi/" class="instagram">
+			  <i class="fa fa-instagram"></i>
+			</a>
+		  </div>
+		</div>
+		</div>
+		<p class="text-copy" style="color: #ffffff;">
+		  Copyright &copy; 2021 All rights reserved
+		</p>
+	  </footer>
+	</body>
+</html>
+
 <!-- End Footer -->
 
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>

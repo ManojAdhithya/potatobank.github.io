@@ -101,22 +101,29 @@ if(isset($_POST['submit']))
     @import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Roboto:wght@300&display=swap');
   </style>
   </head>
-  <body>
+  <body class="bod">
     <!-- Navbar -->
-    <div class="headd">
-
-<div class="navbar">
-    <a class="navlogo" href="index.html" style="padding:0px; " target="_self">
-        <img src="images/logo.svg" alt="logo" width="100" height="50">
-      </a>
-      <a class = "navicons" href="index.html">Home</a>
-      <a class = "navicons" href="customerdetails.php">Customer Details</a>
-      <a class = "navicons" href="customerdetails.php">Transfer Money</a>
-    <a class = "navicons" href="transactionhistory.php">Transaction History</a>
-    <a class = "navicons" href="#contact">Contact</a>
-    
-</div>
-</div>
+    <header class="p-3 bg-dark text-white">
+		<div class="container">
+		  <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+			<a href="index.html" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
+				<img src="images/logo.png" alt="logo" width="200" height="50">
+			</a>
+	
+			<ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+			  <li><a href="index.html" class="nav-link px-2 text-white">Home</a></li>
+			  <li><a href="customerdetails.php" class="nav-link px-2 text-white">Customer Details</a></li>
+			  <li><a href="customerdetails.php" class="nav-link px-2 text-secondary">Transfer Money</a></li>
+			  <li><a href="transactionhistory.php" class="nav-link px-2 text-white">Transaction History</a></li>
+			  <li><a href="#contact" class="nav-link px-2 text-white">Contact</a></li>
+			</ul>
+	
+			<a href="customerdetails.php"><button type="button" class="btn btn-outline-light">Transfer Money</button></a>
+	
+		
+		  </div>
+		</div>
+	  </header>
 <!-- End Navbar -->
 
   <!-- Table -->
@@ -156,7 +163,7 @@ if(isset($_POST['submit']))
             </table>
         </div>
         <br><br><br>
-        <label style="color : black;"><b>Transfer To:</b></label>
+        <label style="color : white;"><b>Transfer To:</b></label>
         <select name="to" class="form-control" required>
             <option value="" disabled selected>Choose</option>
             <?php
@@ -183,11 +190,11 @@ if(isset($_POST['submit']))
         </select>
         <br>
         <br>
-            <label style="color : black;"><b>Amount:</b></label>
+            <label style="color : white;"><b>Amount:</b></label>
             <input type="number" class="form-control" name="amount" required>   
             <br><br>
                 <div style="color: #ffffff;text-align: center; class="text-center" >
-                <button class="btn btn-outline-dark" name="submit" type="submit" id="myBtn" >Transfer</button>
+                <button class="btn btn-outline-light" name="submit" type="submit" id="myBtn" >Transfer</button>
             </div>
         </form>
     </div>
@@ -196,38 +203,29 @@ if(isset($_POST['submit']))
     <!-- Footer -->
   
     <footer>
-    <div class="follow">
-      <h3 style="color: black; font-family: 'Baloo Bhai 2', cursive; font-size: 25px;">Follow Us</h3>
-      <div class="social">
-        <a href="#facebook" class="facebook">
-          <i class="fa fa-facebook"></i>
-        </a>
-        <a href="#twitter" class="twitter">
-          <i class="fa fa-twitter"></i>
-        </a>
-        <a href="#linkedin" class="linkedin">
-          <i class="fa fa-linkedin"></i>
-        </a>
-        <a href="#instagram" class="instagram">
-          <i class="fa fa-instagram"></i>
-        </a>
-      </div>
-    </div>
-    <p class="text-copy">
-      Copyright &copy; 2021 All rights reserved
-    </p>
-  </footer>
+		<div id="contact">
+		<div class="follow">
+		  <h3 style="color: white; font-family: 'Baloo Bhai 2', cursive; font-size: 25px;">Follow Us</h3>
+		  <div class="social">
+			<a href="https://www.facebook.com/manoj.adhithya.16/" class="facebook">
+			  <i class="fa fa-facebook"></i>
+			</a>
+			<a href="#twitter" class="twitter">
+			  <i class="fa fa-twitter"></i>
+			</a>
+			<a href="https://www.linkedin.com/in/manoj-adhithya-001330213/" class="linkedin">
+			  <i class="fa fa-linkedin"></i>
+			</a>
+			<a href="https://www.instagram.com/be.like.adhi/" class="instagram">
+			  <i class="fa fa-instagram"></i>
+			</a>
+		  </div>
+		</div>
+		</div>
+		<p class="text-copy" style="color: #ffffff;">
+		  Copyright &copy; 2021 All rights reserved
+		</p>
+	  </footer>
   <!-- End Footer -->
-
- <!-- Optional JavaScript; choose one of the two! -->
-
-    <!-- Option 1: Bootstrap Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-
-    <!-- Option 2: Separate Popper and Bootstrap JS -->
-    <!--
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
-    -->
   </body>
 </html>

@@ -22,10 +22,7 @@ body{
     background: url(../images/bg.jpg);
 }
 
-.contactus h1{
-    background-color: #145939;
-    text-align: left;
-}
+
 
 .abt span{
     background-color:yellow;
@@ -33,37 +30,6 @@ body{
     color: maroon;
     font-size: x-large;
 }
-
-.navbar a.navicons:hover {
-    background-color: #000;
-  }
-
-  .navbar
-{
-    background-color: #143d59;
-    text-align: center;
-    color: black;
-    font-family: 'Roboto', sans-serif;
-    font-size: larger;
-    font-weight: bold;
-    padding: 0.3cm;
-    width: 100%;
-    background-color: #143d59;
-    overflow: auto;
-
-}
-
-
-
-   .navbar a.navicons {
-    float: right;
-    text-align: center;
-    padding: 12px;
-    color: white;
-    text-decoration: none;
-    font-size: 17px;
-  }
-
   .headd h1{
     font-size: 45px;
     text-align: center;
@@ -77,11 +43,6 @@ body{
   }
   }
 
-
-  .navlogo
-  {
-      float: left;
-  }
 
   .square img {
     float: left;
@@ -105,7 +66,7 @@ box-sizing: border-box;
 }
 
 table {
-    border-collapse: separate;
+  
     border-spacing: 25px;
     width: 100%;
 
@@ -129,3 +90,45 @@ table {
   {
       font-size: large;
   }
+
+  .social{
+    margin-top: 10px;
+}
+.social a {   
+    display: inline-block;   
+    text-align: center;   
+    padding: 8px;   
+    
+    color: white;   
+    font-size: 15px;   
+    }         
+    .social a:hover {   
+    color: #000;   
+      }       
+    .facebook {   
+    background: #3b5998;   
+    color: white;  
+    }         
+    .twitter {   
+    color: white;   
+    background: #00acee;   
+    }   
+    .linkedin {   
+    background:#0e76a8;   
+    color: white;   
+    }          
+    .instagram {   
+    background: #3f729b;   
+    color: white;   
+     }
+
+
+#contact{
+    width: 600px;
+}
+@media only screen and (max-width: 600px) {
+    #contact {
+      width: 400px;
+    }
+  }
+  
