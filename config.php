@@ -1,13 +1,12 @@
 <?php
-    $servername = "localhost";
-    $username = "root";
-    $password = "";
-    $dbname = "customer detail";
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "customer detail";
 
-    $conn = mysqli_connect($servername, $username, $password, $dbname);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 
-    if(!$conn){
-        die("Could not connect to the database due to the following error --> ".mysqli_connect_error());
-    }
-
+if (!$conn) {
+    die("Could not connect to the database due to the following error --> " . mysqli_connect_error());
+}
 ?>
